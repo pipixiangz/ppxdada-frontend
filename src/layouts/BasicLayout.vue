@@ -1,6 +1,6 @@
 <template>
   <div id="basicLayout">
-    <a-layout style="height: 100vh">
+    <a-layout style="height: auto">
       <a-layout-header class="header">
         <global-header />
       </a-layout-header>
@@ -33,8 +33,11 @@ import GlobalHeader from "@/components/GlobalHeader.vue";
   box-shadow: #eee 1px 1px 5px;
 }
 
-#basicLayout.content {
-  margin-bottom: 28px;
+#basicLayout .content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 28px;
   padding: 20px;
   background: linear-gradient(to right, #fefefe, #fff);
 }

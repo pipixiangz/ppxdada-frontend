@@ -6,10 +6,15 @@
     @submit="doSearch"
   >
     <a-form-item field="userName" label="用户名">
-      <a-input v-model="formSearchParams.userName" placeholder="请输入用户名" />
+      <a-input
+        allow-clear
+        v-model="formSearchParams.userName"
+        placeholder="请输入用户名"
+      />
     </a-form-item>
     <a-form-item field="userProfile" label="用户简介">
       <a-input
+        allow-clear
         v-model="formSearchParams.userProfile"
         placeholder="请输入用户简介"
       />
@@ -35,23 +40,31 @@
     <template #userAvatar="{ record }">
       <a-image :src="record.userAvatar" width="50" height="50" />
     </template>
-    <!--头像插槽-->
+    <!--删除功能插槽-->
     <template #optional="{ record }">
       <a-space>
         <a-button status="danger" @click="doDelete(record)">删除</a-button>
       </a-space>
     </template>
+    <!--时间插槽-->
+    <template #createTime="{ record }">
+      {{ dayjs(record.createTime).format("YYYY-MM-DD HH:mm:ss") }}
+    </template>
+    <template #updateTime="{ record }">
+      {{ dayjs(record.updateTime).format("YYYY-MM-DD HH:mm:ss") }}
+    </template>
   </a-table>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, watchEffect } from "vue";
+import { ref, watchEffect } from "vue";
 import {
   deleteUserUsingPost,
   listUserByPageUsingPost,
 } from "@/api/userController";
 import API from "@/api";
 import message from "@arco-design/web-vue/es/message";
+import { dayjs } from "@arco-design/web-vue/es/_utils/date";
 
 const initSearchParams = {
   // 初始值，到时候可以还原回来(不应该被修改)
@@ -128,8 +141,8 @@ const columns = [
   { title: "用户头像", dataIndex: "userAvatar", slotName: "userAvatar" },
   { title: "用户简介", dataIndex: "userProfile" },
   { title: "权限", dataIndex: "userRole" },
-  { title: "创建时间", dataIndex: "createTime" },
-  { title: "更新时间", dataIndex: "updateTime" },
+  { title: "创建时间", dataIndex: "createTime", slotName: "createTime" },
+  { title: "更新时间", dataIndex: "updateTime", slotName: "updateTime" },
   { title: "操作", slotName: "optional" },
 ];
 </script>
