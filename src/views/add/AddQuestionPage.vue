@@ -18,6 +18,9 @@
           <AiGenerateQuestionDrawer
             :appId="appId"
             :onSuccess="onAiGenerateSuccess"
+            :onSSESuccess="onAiGenerateSuccessSSE"
+            :onSSEStart="onSSEStart"
+            :onSSEClose="onSSEClose"
           />
         </a-space>
         <!-- 遍历每道题目 -->
@@ -239,9 +242,32 @@ const handleSubmit = async () => {
   }
 };
 
+// AI 生成题目成功后执行
 const onAiGenerateSuccess = (result: API.QuestionContentDTO[]) => {
   // 将 result 数组中的新生成题目添加到现有的 questionContent 数组中
   questionContent.value = [...questionContent.value, ...result];
   message.success(`AI 生成题目成功，已新增 ${result.length} 道题目`);
+};
+
+// AI 生成题目成功后执行 （SSE）
+const onAiGenerateSuccessSSE = (result: API.QuestionContentDTO) => {
+  // 将 result 数组中的新生成题目添加到现有的 questionContent 数组中
+  questionContent.value = [...questionContent.value, result];
+};
+
+/**
+ * SSE开始生成
+ * @param event
+ */
+const onSSEStart = (event: any) => {
+  message.success("开始生成");
+};
+
+/**
+ * SSE生成结束
+ * @param event
+ */
+const onSSEClose = (event: any) => {
+  message.success("生成完毕");
 };
 </script>
