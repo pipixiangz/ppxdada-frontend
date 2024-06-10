@@ -1,3 +1,9 @@
+## ppxdada-frontend
+
+### 项目描述
+
+开发了一个基于 Spring Boot、Redis、ChatGLM、RxJava、SSE、Vue3、Arco Design 和 Pinia 的 AI 答题应用平台。用户可以通过 AI 快速生成题目并制作应用，管理员审核后，用户可以在线答题，并根据多种评分算法或 AI 得到回答总结。管理员还可以集中管理全站内容并进行统计分析。
+
 ### Vue3 项目开发
 
 使用 Vue3 结合 Arco Design 组件库，开发了包含在线答题、应用检索和管理、应用创建、统计分析等功能的项目，共实现了 10 多个页面。
@@ -10,7 +16,7 @@
 
 使用 TypeScript 结合 ESLint 和 Prettier 确保代码规范，并自定义了 ESLint 规则，以提高项目质量。
 
-v导航菜单生成
+### 导航菜单生成
 
 基于 Vue Router 的路由配置实现自动生成导航菜单，并通过路由的 meta 属性中的 hideInMenu 字段集中控制页面的显示与隐藏。
 
@@ -26,7 +32,7 @@ v导航菜单生成
 
 使用 OpenAPI 工具根据后端 Swagger 接口文档自动生成请求代码和 TypeScript 数据模型，大幅提高开发效率。
 
-### 用创建
+### 应用创建
 
 基于 Arco Design 的 Form 组件实现复杂的动态嵌套表单，支持用户自由增删题目和子选项，通过响应式对象统一接收输入。
 
