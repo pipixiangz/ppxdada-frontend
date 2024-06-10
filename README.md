@@ -49,3 +49,15 @@ v导航菜单生成
 ### 图片上传
 
 基于 Arco Design 的 Upload 组件自定义请求，封装通用图片上传组件，可直接被 Form 组件引入，提高开发效率。
+
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/homepage.jpg)
+
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/UserManagement.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AnswerManagement.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AnswerManagement.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createApps.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/MyAnswers.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/questionManagement.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/scoringManagement.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/Statistics.jpg)
+
