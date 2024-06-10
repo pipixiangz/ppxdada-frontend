@@ -2,7 +2,7 @@
 
 ### 项目描述
 
-开发了一个基于 Spring Boot、Redis、ChatGLM、RxJava、SSE、Vue3、Arco Design 和 Pinia 的 AI 答题应用平台。用户可以通过 AI 快速生成题目并制作应用，管理员审核后，用户可以在线答题，并根据多种评分算法或 AI 得到回答总结。管理员还可以集中管理全站内容并进行统计分析。
+开发了一个基于 Spring Boot、Redis、ChatGLM、RxJava、SSE、Vue3、Arco Design 和 Pinia 的 AI 答题应用平台。用户可以通过 AI 快速生成题目并制作应用，管理员审核后，用户可以在线答题，并根据多种评分算法或 AI 得到回答总结。管理员还可以集中管理全站内容并进行统计分析。An AI quiz application platform was developed using Spring Boot, Redis, ChatGLM, RxJava, SSE, Vue3, Arco Design, and Pinia. Users can quickly generate questions and create applications through AI. After administrator approval, users can take quizzes online and receive summarized answers based on various scoring algorithms or AI. Administrators can centrally manage site content and perform statistical analysis.
 
 ### Vue3 项目开发
 
@@ -69,4 +69,56 @@
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/questionManagement.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/scoringManagement.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/Statistics.jpg)
+
+
+### Vue3 Project Development
+Utilized Vue3 combined with the Arco Design component library to develop a project featuring online quizzes, application retrieval and management, application creation, and statistical analysis, with over 10 pages implemented.
+
+### Vue3 Project Development
+Project Initialization and Layout
+Initialized the project using the Vue-CLI scaffold and independently developed global page layouts and a common front-end project template for future project reuse.
+
+### Vue3 Project Development
+Coding Standards
+Ensured code quality using TypeScript combined with ESLint and Prettier, and customized ESLint rules to enhance project quality.
+
+### Vue3 Project Development
+Navigation Menu Generation
+Implemented automatic navigation menu generation based on Vue Router's route configuration, and controlled page visibility through the hideInMenu field in the route's meta attribute.
+
+### Vue3 Project Development
+Global Permission Management
+Configured permissions through the meta.access field of Vue Router, and used the beforeEach global route guard for permission checks. Permission management code was encapsulated into an independent module for simplicity.
+
+### Vue3 Project Development
+Global State Management
+Defined UserStore using Pinia to manage user login states, and accessed user information on various pages through the composable API (useStore).
+
+### Vue3 Project Development
+Frontend-Backend Integration
+Significantly improved development efficiency using the OpenAPI tool to automatically generate request code and TypeScript data models based on the backend Swagger interface documentation.
+
+### Vue3 Project Development
+Application Creation
+Implemented complex dynamic nested forms using the Form component from Arco Design, allowing users to freely add and remove questions and sub-options. Inputs were received uniformly through reactive objects.
+
+### Vue3 Project Development
+Application Management
+Implemented management pages using the Table component from Arco Design, and simplified the backend's date and time data using custom slots and Day.js.
+
+### Vue3 Project Development
+Application Search
+Defined search condition variables using ref and automatically triggered queries when search conditions changed through watchEffect, resulting in concise and maintainable code.
+
+### Vue3 Project Development
+Application Sharing
+Implemented mobile scan sharing based on QrCode and encapsulated a common sharing popup component. The function to open the popup was exposed using defineExpose, allowing the parent component to call it through ref.
+
+### Vue3 Project Development
+Statistical Analysis
+Performed statistical analysis of popular applications and answer distributions using custom SQL with MyBatis annotations on the backend, and visualized data on the frontend using ECharts.
+
+### Vue3 Project Development
+Image Upload
+Customized requests based on the Upload component from Arco Design, encapsulating a common image upload component that can be directly integrated into the Form component, enhancing development efficiency.
 
