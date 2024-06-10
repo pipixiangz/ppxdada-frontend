@@ -62,7 +62,7 @@ An AI quiz application platform was developed using Spring Boot, Redis, ChatGLM,
 
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/UserManagement.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AppManagement.jpg)
-
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/appDetails.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/answer.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createQuestions.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createApps.jpg)
