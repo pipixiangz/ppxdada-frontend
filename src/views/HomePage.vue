@@ -5,8 +5,10 @@
         :style="{ width: '320px' }"
         placeholder="快速发现答题应用"
         button-text="Search"
+        v-model="formSearchParams.appName"
         size="large"
         search-button
+        @search="doSearch"
       />
     </div>
     <a-list
@@ -37,7 +39,6 @@ import message from "@arco-design/web-vue/es/message";
 import { REVIEW_STATUS_ENUM } from "@/constant/app";
 import ShareModal from "@/components/ShareModal.vue";
 
-// 初始化搜索条件（不应该被修改）
 const initSearchParams = {
   current: 1,
   pageSize: 12,
@@ -46,18 +47,16 @@ const initSearchParams = {
 const searchParams = ref<API.AppQueryRequest>({
   ...initSearchParams,
 });
+const formSearchParams = ref<API.AppQueryRequest>({});
 const dataList = ref<API.AppVO[]>([]);
 const total = ref<number>(0);
 
-/**
- * 加载数据
- */
 const loadData = async () => {
   const params = {
     reviewStatus: REVIEW_STATUS_ENUM.PASS,
     ...searchParams.value,
   };
-  const res = await listAppVoByPageUsingPost(searchParams.value);
+  const res = await listAppVoByPageUsingPost(params); // 使用正确的参数
   if (res.data.code === 0) {
     dataList.value = res.data.data?.records || [];
     total.value = res.data.data?.total || 0;
@@ -66,10 +65,6 @@ const loadData = async () => {
   }
 };
 
-/**
- * 当分页变化时，改变搜索条件，触发数据加载
- * @param page
- */
 const onPageChange = (page: number) => {
   searchParams.value = {
     ...searchParams.value,
@@ -77,12 +72,17 @@ const onPageChange = (page: number) => {
   };
 };
 
-/**
- * 监听 searchParams 变量，改变时触发数据的重新加载
- */
 watchEffect(() => {
   loadData();
 });
+
+const doSearch = () => {
+  searchParams.value = {
+    ...initSearchParams,
+    ...formSearchParams.value,
+  };
+  loadData(); // 手动触发数据加载
+};
 </script>
 
 <style scoped>
