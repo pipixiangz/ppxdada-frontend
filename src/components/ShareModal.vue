@@ -1,6 +1,6 @@
 <template>
   <a-modal v-model:visible="visible" @cancel="closeModal" :footer="false">
-    <template #title> 分享</template>
+    <template #title>{{ title }}</template>
     <h4 style="margin-top: 0">复制分享链接</h4>
     <a-typography-paragraph copyable>
       {{ link }}
@@ -15,26 +15,21 @@
 import QRCode from "qrcode";
 import { defineProps, ref, withDefaults, defineExpose } from "vue";
 
-/**
- * 定义组件属性类型
- */
+// 定义组件属性类型
 interface Props {
   title: string;
   link: string;
 }
 
-/**
- * 给组件指定初始值
- */
+// 给组件指定初始值
 const props = withDefaults(defineProps<Props>(), {
-  title: () => "分享",
-  link: () => "https://laoyujianli.com/share/yupi",
+  title: "分享",
+  link: "https://github.com/pipixiangz/ppxdada",
 });
 
-// 是否可见
-const visible = ref(false);
-// 要展示的图片
-const code = ref();
+// 定义组件状态
+const visible = ref(false); // 控制弹窗可见性
+const code = ref(""); // 存储生成的二维码图片链接
 
 // 打开弹窗
 const openModal = () => {
@@ -46,12 +41,12 @@ const closeModal = () => {
   visible.value = false;
 };
 
-// 暴露函数给父组件
+// 暴露函数给父组件使用
 defineExpose({
   openModal,
 });
 
-// 二维码生成
+// 生成二维码
 QRCode.toDataURL(props.link)
   .then((url: string) => {
     code.value = url;

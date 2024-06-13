@@ -11,7 +11,7 @@
           :style="{ padding: 0, marginRight: '38px' }"
           disabled
         >
-          <div class="titleBar">
+          <div class="titleBar" @click="goToHomePage">
             <img class="logo" src="../assets/testbig.png" />
             <div class="title">皮皮翔答答</div>
           </div>
@@ -73,6 +73,13 @@ const doMenuClick = (key: string) => {
     path: key,
   });
 };
+
+// 点击图标或标题跳转到首页
+const goToHomePage = () => {
+  router.push({
+    path: "/",
+  });
+};
 </script>
 
 <style scoped>
@@ -82,6 +89,7 @@ const doMenuClick = (key: string) => {
 .titleBar {
   display: flex;
   align-items: center;
+  cursor: pointer; /* 添加鼠标指针效果 */
 }
 
 .title {

@@ -1,8 +1,9 @@
 import axios from "axios";
 import { Message } from "@arco-design/web-vue";
 
+const isDiv = process.env.NODE_ENV === "development";
 const myAxios = axios.create({
-  baseURL: "http://localhost:8101",
+  baseURL: isDiv ? "http://localhost:8101" : "http://124.223.86.223",
   timeout: 60000,
   // 携带cookie
   withCredentials: true,

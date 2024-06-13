@@ -24,7 +24,9 @@
       @page-change="onPageChange"
     >
       <template #item="{ item }">
-        <AppCard :app="item" />
+        <div class="card-wrapper">
+          <AppCard :app="item" />
+        </div>
       </template>
     </a-list>
   </div>
@@ -94,16 +96,23 @@ const doSearch = () => {
   text-align: center;
 }
 
+.card-wrapper {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-wrapper:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+}
+
 .list-demo-action-layout .image-area {
   width: 183px;
   height: 119px;
   overflow: hidden;
-  border-radius: 2px;
-}
-
-.list-demo-action-layout .list-demo-item {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--color-fill-3);
+  border-radius: 10px; /* 修改为圆角 */
 }
 
 .list-demo-action-layout .image-area img {

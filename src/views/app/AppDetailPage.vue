@@ -123,9 +123,19 @@ const doShare = (e: Event) => {
 
 <style scoped>
 #appDetailPage {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #appDetailPage .content-wrapper > * {
   margin-bottom: 24px;
+}
+
+a-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 </style>

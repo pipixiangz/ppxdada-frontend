@@ -189,3 +189,19 @@ const doSubmit = async () => {
   submitting.value = false;
 };
 </script>
+
+<style scoped>
+.answer-page {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+.question-title {
+  margin-bottom: 16px;
+}
+.options-container {
+  margin-top: 16px;
+}
+.button-group {
+  margin-top: 24px;
+}
+</style>

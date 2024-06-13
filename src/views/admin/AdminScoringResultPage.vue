@@ -42,6 +42,8 @@
   <a-table
     :columns="columns"
     :data="dataList"
+    column-resizable
+    :bordered="{ cell: true }"
     :pagination="{
       showTotal: true,
       pageSize: searchParams.pageSize,

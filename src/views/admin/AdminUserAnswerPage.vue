@@ -50,9 +50,6 @@
     }"
     @page-change="onPageChange"
   >
-    <template #resultPicture="{ record }">
-      <a-image width="64" :src="record.resultPicture" />
-    </template>
     <template #appType="{ record }">
       {{ APP_TYPE_MAP[record.appType] }}
     </template>
@@ -179,11 +176,6 @@ const columns = [
   {
     title: "描述",
     dataIndex: "resultDesc",
-  },
-  {
-    title: "图片",
-    dataIndex: "resultPicture",
-    slotName: "resultPicture",
   },
   {
     title: "得分",

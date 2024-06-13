@@ -26,8 +26,11 @@
     </a-form-item>
   </a-form>
   <a-table
+    class="custom-table"
     :columns="columns"
     :data="dataList"
+    column-resizable
+    :bordered="{ cell: true }"
     :pagination="{
       showTotal: true,
       pageSize: searchParams.pageSize,
@@ -40,8 +43,18 @@
       <div
         v-for="question in JSON.parse(record.questionContent)"
         :key="question.title"
+        :style="{ marginBottom: '10px' }"
       >
-        {{ question }}
+        <strong>{{ question.title }}</strong>
+        <div
+          v-for="option in question.options"
+          :key="option.key"
+          :style="{ marginLeft: '20px' }"
+        >
+          <a-radio :value="option.result"
+            >{{ option.key }}. {{ option.value }}</a-radio
+          >
+        </div>
       </div>
     </template>
     <template #createTime="{ record }">
@@ -147,33 +160,52 @@ const columns = [
   {
     title: "id",
     dataIndex: "id",
+    className: "column-border",
   },
   {
     title: "题目内容",
     dataIndex: "questionContent",
     slotName: "questionContent",
+    className: "column-border",
   },
   {
     title: "应用 id",
     dataIndex: "appId",
+    className: "column-border",
   },
   {
     title: "用户 id",
     dataIndex: "userId",
+    className: "column-border",
   },
   {
     title: "创建时间",
     dataIndex: "createTime",
     slotName: "createTime",
+    className: "column-border",
   },
   {
     title: "更新时间",
     dataIndex: "updateTime",
     slotName: "updateTime",
+    className: "column-border",
   },
   {
     title: "操作",
     slotName: "optional",
+    className: "column-border",
   },
 ];
 </script>
+
+<style scoped>
+.custom-table .arco-table th,
+.custom-table .arco-table td {
+  border-right: 1px solid #e8e8e8;
+}
+
+.custom-table .arco-table th:last-child,
+.custom-table .arco-table td:last-child {
+  border-right: none;
+}
+</style>
