@@ -73,6 +73,7 @@ An AI quiz application platform was developed using Spring Boot, Redis, ChatGLM,
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/questionManagement.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/scoringManagement.jpg)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/Statistics.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/About.jpg)
 
 
 ### Vue3 Project Development
