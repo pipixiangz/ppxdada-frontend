@@ -13,8 +13,11 @@
           target="_blank"
           style="text-decoration: none"
         >
-          皮皮翔答答
+          皮皮翔AI答答
         </a>
+        <a href="https://beian.miit.gov.cn/" target="_blank">京公网安备11010802044596号</a>
+        <a> &nbsp;</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2024073488号</a>
       </a-layout-footer>
     </a-layout>
   </div>
