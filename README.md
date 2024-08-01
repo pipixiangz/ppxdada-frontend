@@ -60,20 +60,21 @@ An AI quiz application platform was developed using Spring Boot, Redis, ChatGLM,
 
 基于 Arco Design 的 Upload 组件自定义请求，封装通用图片上传组件，可直接被 Form 组件引入，提高开发效率。
 
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/homepage.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/homepage.png)
 
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/UserManagement.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AppManagement.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/appDetails.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/answer.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createQuestions.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createApps.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/MyAnswers.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AnswerManagement.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/questionManagement.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/scoringManagement.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/Statistics.jpg)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/About.jpg)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/UserManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AppManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/appDetails.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/answer.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createQuestions.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createApps.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/MyAnswers.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AnswerManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/questionManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/scoringManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/Statistics.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/About.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/login.png)
 
 
 ### Vue3 Project Development
