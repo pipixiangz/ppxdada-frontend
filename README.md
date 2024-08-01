@@ -62,14 +62,14 @@ An AI quiz application platform was developed using Spring Boot, Redis, ChatGLM,
 
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/homepage.png)
 
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/UserManagement.png)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AppManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/userManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/appManagement.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/appDetails.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/answer.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createQuestions.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/createApps.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/MyAnswers.png)
-![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/AnswerManagement.png)
+![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/answerManagement.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/questionManagement.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/scoringManagement.png)
 ![image](https://github.com/pipixiangz/ppxdada-frontend/blob/main/img/Statistics.png)
