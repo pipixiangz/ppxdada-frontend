@@ -3,7 +3,7 @@ import { Message } from "@arco-design/web-vue";
 
 const isDiv = process.env.NODE_ENV === "development";
 const myAxios = axios.create({
-  baseURL: isDiv ? "http://localhost:8101" : "https://ppxdada.online/api",
+  baseURL: isDiv ? "http://localhost:8101" : "https://ppxdada.online",
   timeout: 60000,
   // 携带cookie
   withCredentials: true,

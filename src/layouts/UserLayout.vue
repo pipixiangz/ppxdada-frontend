@@ -4,7 +4,7 @@
       <a-layout-header class="header">
         <a-space>
           <img src="../assets/testbig.png" class="logo" />
-          <div>皮皮翔答答 AI 答题应用平台</div>
+          <div>皮皮翔 AI 答答</div>
         </a-space>
       </a-layout-header>
       <a-layout-content class="content">
@@ -16,7 +16,7 @@
           target="_blank"
           style="text-decoration: none"
         >
-          皮皮翔答答
+          皮皮翔AI答答
         </a></a-layout-footer
       >
     </a-layout>
@@ -26,8 +26,6 @@
 <style scoped>
 #userLayout {
   text-align: center;
-  background: url("https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png")
-    0% 0% / 100% 100%;
 }
 
 #userLayout .logo {

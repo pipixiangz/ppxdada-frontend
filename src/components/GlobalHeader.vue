@@ -13,7 +13,7 @@
         >
           <div class="titleBar" @click="goToHomePage">
             <img class="logo" src="../assets/testbig.png" />
-            <div class="title">皮皮翔答答</div>
+            <div class="title">皮皮翔AI答答</div>
           </div>
         </a-menu-item>
         <a-menu-item v-for="item in visibleRoutes" :key="item.path">
@@ -21,12 +21,21 @@
         </a-menu-item>
       </a-menu>
     </a-col>
-    <a-col flex="100px">
-      <div v-if="loginUserStore.loginUser.id">
-        {{ loginUserStore.loginUser.userName ?? "匿名用户" }}
+    <a-col flex="120px">
+      <div
+        v-if="loginUserStore.loginUser.id"
+        class="user-info"
+        @click="goToLoginPage"
+      >
+        <a-avatar :size="32" :image-url="loginUserStore.loginUser.userAvatar">
+          {{ loginUserStore.loginUser.userName ? loginUserStore.loginUser.userName[0].toUpperCase() : 'U' }}
+        </a-avatar>
+        <span class="user-name">{{
+          loginUserStore.loginUser.userName ?? "匿名用户"
+        }}</span>
       </div>
       <div v-else>
-        <a-button type="primary" href="/user/login">登录</a-button>
+        <a-button type="primary" @click="goToLoginPage">登录</a-button>
       </div>
     </a-col>
   </a-row>
@@ -39,27 +48,19 @@ import { computed, ref } from "vue";
 import { useLoginUserStore } from "@/store/userStore";
 import checkAccess from "@/access/checkAccess";
 
-// 引入和初始化用户状态管理
 const loginUserStore = useLoginUserStore();
-
-// 引入和初始化路由器， 从 Vue Router 中获取 useRouter 钩子，用于访问路由器实例
 const router = useRouter();
-
-// Tab 栏选中菜单项， 创建一个响应式变量 selectedKeys，并初始化为一个包含根路径 "/" 的数组。这个数组表示当前选中的菜单项
 const selectedKeys = ref(["/"]);
 
-// 路由跳转后，执行对应逻辑（更新选中的菜单项）
 router.afterEach((to, from, failure) => {
   selectedKeys.value = [to.path];
 });
 
-// 展示在菜单的路由数组
 const visibleRoutes = computed(() => {
   return routes.filter((item) => {
     if (item.meta?.hideInMenu) {
       return false;
     }
-    // 根据权限过滤菜单
     if (!checkAccess(loginUserStore.loginUser, item.meta?.access as string)) {
       return false;
     }
@@ -67,37 +68,66 @@ const visibleRoutes = computed(() => {
   });
 });
 
-// 路由跳转事件,点击菜单跳转到对应页面
 const doMenuClick = (key: string) => {
   router.push({
     path: key,
   });
 };
 
-// 点击图标或标题跳转到首页
 const goToHomePage = () => {
   router.push({
     path: "/",
+  });
+};
+
+const goToLoginPage = () => {
+  router.push({
+    path: "/user/login",
   });
 };
 </script>
 
 <style scoped>
 #globalHeader {
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255);
+  backdrop-filter: blur(10px); /* 添加模糊效果，增强可读性 */
 }
 
 .titleBar {
   display: flex;
   align-items: center;
-  cursor: pointer; /* 添加鼠标指针效果 */
+  cursor: pointer;
 }
 
 .title {
   margin-left: 16px;
   color: black;
+  font-weight: bold;
 }
 
 .logo {
   height: 48px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-name {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/* 加粗导航栏字体 */
+:deep(.arco-menu-item) {
+  font-weight: bold;
+}
+
+/* 确保选中的菜单项字体颜色清晰可见 */
+:deep(.arco-menu-selected) {
+  color: rgb(var(--primary-6));
 }
 </style>

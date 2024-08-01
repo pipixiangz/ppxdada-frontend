@@ -3,7 +3,7 @@
     <div class="searchBar">
       <a-input-search
         :style="{ width: '320px' }"
-        placeholder="快速发现答题应用"
+        placeholder="欢迎搜索答题应用"
         button-text="Search"
         v-model="formSearchParams.appName"
         size="large"
